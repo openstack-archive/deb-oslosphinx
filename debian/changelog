@@ -1,0 +1,5 @@
+oslo-sphinx (1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #717809).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 25 Jul 2013 17:57:32 +0800
