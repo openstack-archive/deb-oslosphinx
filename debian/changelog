@@ -1,3 +1,9 @@
+oslo-sphinx (1.0-2) unstable; urgency=low
+
+  * Cleans correctly (package can be built twice).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 25 Jul 2013 19:24:07 +0800
+
 oslo-sphinx (1.0-1) unstable; urgency=low
 
   * Initial release (Closes: #717809).
