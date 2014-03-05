@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+PYTHONS:=$(shell pyversions -vr)
+
 UPSTREAM_GIT = git://github.com/openstack/oslo.sphinx.git
 include /usr/share/openstack-pkg-tools/pkgos.make
 
@@ -11,3 +13,9 @@ export OSLO_PACKAGE_VERSION=$(VERSION)
 override_dh_clean:
 	dh_clean -O--buildsystem=python_distutils
 	rm -rf oslo.sphinx.egg-info
+
+override_dh_auto_install:
+	set -e && for pyvers in $(PYTHONS); do \
+		python$$pyvers setup.py install --install-layout=deb \
+			--root $(CURDIR)/debian/python-oslosphinx; \
+	done

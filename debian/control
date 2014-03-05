@@ -15,10 +15,22 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/oslo-sphinx.git
 Vcs-Git: git://anonscm.debian.org/openstack/oslo-sphinx.git
 Homepage: https://github.com/openstack/oslo.sphinx
 
-Package: python-oslo.sphinx
+Package: python-oslosphinx
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~)
 Depends: ${misc:Depends}, ${python:Depends}
 Description: theme and extension support for openstack
  Theme and extension support for Sphinx documentation from the OpenStack
- project.
+ project. To use the theme, symply add 'oslosphinx' to the extensions list in
+ the conf.py file in your Sphinx project.
+
+Package: python-oslo.sphinx
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: ${misc:Depends}, ${python:Depends}, python-oslosphinx
+Description: theme and extension support for openstack - transition package
+ Theme and extension support for Sphinx documentation from the OpenStack
+ project. To use the theme, symply add 'oslosphinx' to the extensions list in
+ the conf.py file in your Sphinx project.
+ .
+ This is a dummy transition package.
