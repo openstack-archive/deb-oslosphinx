@@ -4,6 +4,8 @@ oslo-sphinx (2.0-1) experimental; urgency=medium
   * Standards-Version: is now 3.9.5.
   * Upstream renamed oslo.sphinx into oslosphinx, transitionning
     accordingly (and adding a new package).
+  * Removed oslo/sphinx/theme/openstack/static/jquery.tweet.js from
+    debian/copyright, because the file is gone upstream.
 
  -- Thomas Goirand <zigo@debian.org>  Wed, 05 Mar 2014 15:54:09 +0800
 
