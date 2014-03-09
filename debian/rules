@@ -18,4 +18,5 @@ override_dh_auto_install:
 	set -e && for pyvers in $(PYTHONS); do \
 		python$$pyvers setup.py install --install-layout=deb \
 			--root $(CURDIR)/debian/python-oslosphinx; \
+		cp -rf oslosphinx/theme $(CURDIR)/debian/python-oslosphinx/usr/lib/python$$pyvers/dist-packages/oslosphinx ; \
 	done
