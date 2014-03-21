@@ -1,3 +1,10 @@
+oslo-sphinx (1.0-3) unstable; urgency=medium
+
+  * Fixed license of oslo/sphinx/theme/openstack/static/nature.css which is
+    under a BSD-2-clause license. (Closes: #740932).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 21 Mar 2014 05:49:08 +0000
+
 oslo-sphinx (1.0-2) unstable; urgency=low
 
   * Cleans correctly (package can be built twice).
