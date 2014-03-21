@@ -1,3 +1,10 @@
+oslo-sphinx (2.0-3) experimental; urgency=medium
+
+  * Fixed license of oslo/sphinx/theme/openstack/static/nature.css which is
+    under a BSD-2-clause license (this was previously fixed in Sid).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 21 Mar 2014 05:56:11 +0000
+
 oslo-sphinx (2.0-2) experimental; urgency=medium
 
   * Packages the oslosphinx/theme folder correctly.
@@ -14,6 +21,14 @@ oslo-sphinx (2.0-1) experimental; urgency=medium
     debian/copyright, because the file is gone upstream.
 
  -- Thomas Goirand <zigo@debian.org>  Wed, 05 Mar 2014 15:54:09 +0800
+
+oslo-sphinx (1.0-3) unstable; urgency=medium
+
+  * Fixed license of oslo/sphinx/theme/openstack/static/nature.css which is
+    under a BSD-2-clause license. (Closes: #740932).
+  * Standards-Version: is now 3.9.5.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 21 Mar 2014 05:49:08 +0000
 
 oslo-sphinx (1.0-2) unstable; urgency=low
 
