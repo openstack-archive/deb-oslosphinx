@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
                openstack-pkg-tools,
                python-all (>= 2.6.6-3~),
                python-setuptools
-Build-Depends-Indep: python-d2to1, python-pbr
+Build-Depends-Indep: python-d2to1, python-hacking, python-pbr
 Standards-Version: 3.9.5
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/oslo-sphinx.git
 Vcs-Git: git://anonscm.debian.org/openstack/oslo-sphinx.git

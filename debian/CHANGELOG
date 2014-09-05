@@ -1,0 +1,228 @@
+commit d32931265aa9cbc3401740119199c61715d2a15c
+Author: Vishvananda Ishaya <vishvananda@gmail.com>
+Date:   Tue Mar 18 11:22:06 2014 -0700
+
+    Update manifest to use oslosphinx
+    
+    The recent rename to oslosphinx missed the MANIFEST.in, which
+    breaks packaging of the non .py files.
+    
+    Change-Id: Ib43879697cb855341904500dae3075f7ea5c17c0
+    Resolves-bug: 1294272
+
+commit ba83cf44b514f65b85b199697f8668fe47ff1083
+Author: ChangBo Guo(gcb) <eric.guo@easystack.cn>
+Date:   Mon Feb 24 04:19:47 2014 -0500
+
+    Remove vim header
+    
+    We don't need vim modelines in each source file, it can be set in
+    user's vimrc.
+    
+    Change-Id: If4f0e93821e20ea837c1fc908845089dd192fcde
+    Closes-Bug: #1229324
+
+commit 28f4cf00a061a96c14ec389f11aa3d919d94d040
+Author: Ben Nemec <bnemec@redhat.com>
+Date:   Wed Feb 12 16:40:51 2014 +0000
+
+    Remove references to oslo.sphinx
+    
+    There were a few left over in the documentation
+    
+    Change-Id: I87ca3e6c104798a94874916df355b6bdc74c1408
+
+commit 54062b0b1deeab9e9339378f9450ff495e216b19
+Merge: e7a6344 b31e8f8
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Tue Feb 11 17:04:36 2014 +0000
+
+    Merge "Sync with global requirements"
+
+commit e7a6344754f04943acc050872150ab60907b365c
+Author: Doug Hellmann <doug.hellmann@dreamhost.com>
+Date:   Fri Feb 7 20:42:08 2014 +0000
+
+    Update .gitreview after repo rename
+    
+    Change-Id: I6b6e20a7884b47ade466fc38641a5ac1a5f3e146
+
+commit 229e16bde97e7b3c7d9c0fd7a4a18c553ce94522
+Author: Doug Hellmann <doug.hellmann@dreamhost.com>
+Date:   Thu Feb 6 08:42:54 2014 -0800
+
+    Rename package from oslo.sphinx to oslosphinx
+    
+    Having the sphinx theme in the same namespace package
+    as the production code has been causing issues with
+    devstack installations. This change renames the package
+    to move it out of the namespace. Another change to the
+    openstack-infra/config repository will rename the
+    git repository and associated jobs.
+    
+    Partial-bug: #1277168
+    
+    Change-Id: I7788a9d6b5984fdfcc4678f2182104d2eb8a2be0
+
+commit b31e8f8ca4527e124f9eb15c0a9266a672c6b0bf
+Author: Sascha Peilicke <saschpe@gmx.de>
+Date:   Thu Jan 16 09:16:42 2014 +0100
+
+    Sync with global requirements
+    
+    Change-Id: I6667cf4e868abd4bc63d0d950f7a21c0b5e53f54
+
+commit 0fd757d3ed10842a4cd34036a4ab6f983c3f6238
+Merge: 23e6cb4 a530d5e
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Mon Dec 30 15:30:38 2013 +0000
+
+    Merge "Add -U flag to pip install command"
+
+commit a530d5ed8187fbc613c09fd44584f14c572fe217
+Author: Sergey Lukjanov <slukjanov@mirantis.com>
+Date:   Fri Dec 13 20:13:11 2013 +0400
+
+    Add -U flag to pip install command
+    
+    The -U flag makes tox able to upgrade all packages to the newest available
+    version.
+    
+    Change-Id: Ibe5fa0115c2b151ae6f3bd741cc561d2435499e8
+
+commit 23e6cb4e11252a04a151b536f15c7a2fc089ec8f
+Author: Joe Gordon <joe.gordon0@gmail.com>
+Date:   Mon Nov 11 10:56:11 2013 -0800
+
+    Update URL for global HACKING document
+    
+    * Related to I579e7c889f3addc2cd40bce0c584bbc70bf435e2
+    * Rename local-checks section to make it clearer
+    
+    Change-Id: If4e006368c09dcd6c87ebf7a2aba448c9a9390de
+
+commit 8e152992d4b634e8e346ee6271bf73f579807306
+Merge: d4b06ba 6a71811
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Fri Sep 20 15:27:24 2013 +0000
+
+    Merge "Update build config"
+
+commit 6a71811cd733224c7dfb0ed7c5c8f155cfe58976
+Author: Monty Taylor <mordred@inaugust.com>
+Date:   Thu Sep 19 07:36:45 2013 -0700
+
+    Update build config
+    
+    Use latest pbr things that don't require pbr. Also update the tox config
+    to ensure venv is updated properly.
+    
+    Change-Id: I157127abd129bbe085c64e2a14f67296da0c4b5e
+
+commit d4b06bab5659926ac8219f750361be4a5158420a
+Author: Mark McLoughlin <markmc@redhat.com>
+Date:   Wed Sep 18 07:48:56 2013 -0700
+
+    Add namespace_packages to setup.cfg
+    
+    We lost this when switching to latest pbr.
+    
+    Thanks to dprince for catching this in Smokestack.
+    
+    Change-Id: Ideb3f9750269d825f380351c3bbbbf743bff08ba
+
+commit c89928aaa02d6f84d2edabda246812f0976e6640
+Author: Monty Taylor <mordred@inaugust.com>
+Date:   Fri Sep 13 11:33:49 2013 -0500
+
+    Update pbr usage past needing d2to1
+    
+    Change-Id: Ia5c8dd9259e8098c2ad39eda6fc44c6db81944ad
+
+commit f296853bedb92c3faded41790a05c203f41e9732
+Author: Julien Danjou <julien@danjou.info>
+Date:   Thu Jul 25 16:09:18 2013 +0200
+
+    Remove useless jquery.tweet.js
+    
+    This file exports a jQuery tweet function, but it's never called anywhere in
+    the theme.
+    
+    Change-Id: Ie5191940a8e9dc3e2562888d050cd00dc63066d8
+
+commit 9f34799a2c9880fce18d3f89033caa968cfd7ad1
+Author: Sergey Lukjanov <slukjanov@mirantis.com>
+Date:   Sat Jul 20 00:48:36 2013 +0400
+
+    Allow use of hacking 0.6.0 and fix min version
+    
+    Change-Id: If336be59cf790029b5e24f05074e6ec6e9658134
+
+commit e4b2587d6b7ae2faa8cb9da7039a82705fbb3067
+Author: Monty Taylor <mordred@inaugust.com>
+Date:   Fri Jul 5 11:06:22 2013 -0400
+
+    Add an OpenStack-wide intersphinx mapping file
+    
+    Change-Id: Id30470132eb9540b6f7fb693fca5ec0cbe2ce49a
+
+commit 9ab5dacf3efbf5c3900176484082edf2623ed638
+Merge: f93071e b139fa8
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Fri Jul 12 22:45:30 2013 +0000
+
+    Merge "Ensure that AUTHORS and ChangeLog are packaged"
+
+commit b139fa873e35fb4e60333f25b6e548d4a355becc
+Author: Dirk Mueller <dirk@dmllr.de>
+Date:   Mon Jul 8 11:04:55 2013 +0200
+
+    Ensure that AUTHORS and ChangeLog are packaged
+    
+    Include AUTHORS and ChangeLog from pbr to be included
+    in the sdist tarball. Add a minimal HACKING.rst for
+    consistency with other projects.
+    
+    Fixes LP Bug #1186518
+    
+    Change-Id: I0f188c1c1b449b74b43296222d33a89f98645950
+
+commit f93071eef0039a570f887bbd2c46324ce75873ce
+Author: Monty Taylor <mordred@inaugust.com>
+Date:   Fri Jul 5 11:15:52 2013 -0400
+
+    Add emacs save files to gitignore
+    
+    Change-Id: If0accbcc80d9289907d83a9df0e0d0604c11800b
+
+commit 4e2051a422307ee1a9c28cc221fa3ff82d025c0d
+Author: Monty Taylor <mordred@inaugust.com>
+Date:   Fri Jul 5 13:04:22 2013 -0400
+
+    Add venv tox env.
+    
+    OpenStack CI requires this to generate the tarball.
+    
+    Change-Id: I170f4d25e4a59027d4c85ff70f03f31a1b3dc916
+
+commit ac91ff16bc7e0ec7bd9157cef04aae5f5518663a
+Author: Doug Hellmann <doug.hellmann@dreamhost.com>
+Date:   Mon Jul 1 17:32:22 2013 -0400
+
+    Import Sphinx theme for OpenStack
+    
+    This is a copy of the Sphinx theme for OpenStack developer
+    documentation imported from the ceilometer repository. After
+    this library is released, we will remove the copies of the
+    theme from all of the other repositories.
+    
+    blueprint oslo.sphinx
+    
+    Change-Id: I20b6c224b8d8fbede354c2a28ad67eda3a4b9dac
+    Signed-off-by: Doug Hellmann <doug.hellmann@dreamhost.com>
+
+commit eca47086d010f519bf7fb32e9c56c79e13c255c9
+Author: OpenStack Project Creator <openstack-infra@lists.openstack.org>
+Date:   Sun Jun 30 17:07:29 2013 +0000
+
+    Added .gitreview
