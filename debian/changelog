@@ -1,3 +1,9 @@
+oslo-sphinx (2.2.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 24 Sep 2014 09:47:25 +0800
+
 oslo-sphinx (2.2.0.0~a3-1) experimental; urgency=medium
 
   * New upstream release.
