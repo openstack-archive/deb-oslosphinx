@@ -2,14 +2,13 @@ Source: oslo-sphinx
 Section: python
 Priority: optional
 Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
-Uploaders: Julien Danjou <acid@debian.org>,
-           Thomas Goirand <zigo@debian.org>,
-           Mehdi Abaakouk <sileht@sileht.net>
+Uploaders: Thomas Goirand <zigo@debian.org>
 Build-Depends: debhelper (>= 9),
                openstack-pkg-tools,
                python-all (>= 2.6.6-3~),
+               python-pbr,
                python-setuptools
-Build-Depends-Indep: python-d2to1, python-hacking, python-pbr
+Build-Depends-Indep: python-d2to1, python-hacking, python-requests (>= 2.2.0)
 Standards-Version: 3.9.5
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/oslo-sphinx.git
 Vcs-Git: git://anonscm.debian.org/openstack/oslo-sphinx.git
@@ -18,7 +17,10 @@ Homepage: https://github.com/openstack/oslo.sphinx
 Package: python-oslosphinx
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~)
-Depends: ${misc:Depends}, ${python:Depends}
+Depends: python-pbr (>= 0.6),
+         python-requests (>= 2.2.0),
+         ${misc:Depends},
+         ${python:Depends}
 Description: theme and extension support for openstack
  Theme and extension support for Sphinx documentation from the OpenStack
  project. To use the theme, symply add 'oslosphinx' to the extensions list in
@@ -27,7 +29,7 @@ Description: theme and extension support for openstack
 Package: python-oslo.sphinx
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~)
-Depends: ${misc:Depends}, ${python:Depends}, python-oslosphinx
+Depends: python-oslosphinx, ${misc:Depends}, ${python:Depends}
 Description: theme and extension support for openstack - transition package
  Theme and extension support for Sphinx documentation from the OpenStack
  project. To use the theme, symply add 'oslosphinx' to the extensions list in
