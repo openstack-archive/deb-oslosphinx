@@ -3,6 +3,7 @@ oslo-sphinx (2.5.0-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Added python-pbr and python-requests as new Depends.
   * Uploading to unstable.
+  * Drops python-oslo.sphinx transition package after the release of Jessie.
 
  -- Thomas Goirand <zigo@debian.org>  Wed, 25 Feb 2015 10:20:53 +0100
 
