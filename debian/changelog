@@ -2,6 +2,7 @@ oslo-sphinx (3.2.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * d/control: Align dependencies with upstream.
+  * d/gbp.conf: Update debian-branch to debian/liberty.
 
  -- Corey Bryant <corey.bryant@canonical.com>  Wed, 30 Sep 2015 21:23:21 -0400
 
