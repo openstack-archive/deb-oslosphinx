@@ -7,10 +7,11 @@ Build-Depends: debhelper (>= 9),
                dh-python,
                openstack-pkg-tools (>= 23~),
                python-all (>= 2.6.6-3~),
-               python-pbr,
+               python-pbr (>= 1.8),
                python-setuptools,
-Build-Depends-Indep: python-hacking,
-                     python-requests,
+               python-sphinx,
+Build-Depends-Indep: python-hacking (>= 0.10.0),
+                     python-requests (>= 2.5.2),
 Standards-Version: 3.9.6
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/oslo-sphinx.git
 Vcs-Git: git://anonscm.debian.org/openstack/oslo-sphinx.git
@@ -19,8 +20,8 @@ Homepage: https://github.com/openstack/oslo.sphinx
 Package: python-oslosphinx
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~),
-Depends: python-pbr,
-         python-requests,
+Depends: python-pbr (>= 1.8),
+         python-requests (>= 2.5.2),
          ${misc:Depends},
          ${python:Depends},
 Description: theme and extension support for openstack
