@@ -1,4 +1,4 @@
-oslo-sphinx (3.2.0-1) UNRELEASED; urgency=medium
+oslo-sphinx (4.0.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * d/control: Align dependencies with upstream.
