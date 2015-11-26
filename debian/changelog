@@ -1,4 +1,4 @@
-oslo-sphinx (4.0.0-2) UNRELEASED; urgency=medium
+oslo-sphinx (4.0.0-1) experimental; urgency=medium
 
   [ Corey Bryant ]
   * New upstream release.
