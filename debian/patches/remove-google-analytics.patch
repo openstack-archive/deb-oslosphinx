@@ -1,0 +1,18 @@
+Description: Removes Google Analytics JS
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: https://review.openstack.org/#/c/250389/
+Last-Update: 2015-11-26
+
+--- oslo-sphinx-4.0.0.orig/oslosphinx/theme/openstack/layout.html
++++ oslo-sphinx-4.0.0/oslosphinx/theme/openstack/layout.html
+@@ -95,10 +95,6 @@
+ {% block footer %}
+ {{ super() }}
+ <script type="text/javascript">
+-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+-</script>
+-<script type="text/javascript">
+ try {
+ //Tracking docs.openstack.org/developer/<projectname> only
+ //The URL is built from the project variable in conf.py

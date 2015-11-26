@@ -1,11 +1,15 @@
-oslo-sphinx (4.0.0-1) UNRELEASED; urgency=medium
+oslo-sphinx (4.0.0-2) UNRELEASED; urgency=medium
 
+  [ Corey Bryant ]
   * New upstream release.
   * d/control: Align dependencies with upstream.
   * d/gbp.conf: Update debian-branch to debian/liberty.
   * d/control: Update uploaders.
 
- -- Corey Bryant <corey.bryant@canonical.com>  Wed, 30 Sep 2015 21:23:21 -0400
+  [ Thomas Goirand ]
+  * Add patch to remove google-analytics.com javascript.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 26 Nov 2015 15:02:24 +0100
 
 oslo-sphinx (2.5.0-1) unstable; urgency=medium
 
