@@ -1,0 +1,16 @@
+Description: Allow to pass if git isn't installed.
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: no
+Last-Update: 2015-12-27
+
+--- oslo-sphinx-4.0.0.orig/oslosphinx/__init__.py
++++ oslo-sphinx-4.0.0/oslosphinx/__init__.py
+@@ -25,7 +25,7 @@ def _guess_cgit_link():
+         git_remote = subprocess.check_output(
+             ['git', 'config', '--local', '--get', 'remote.origin.url']
+         )
+-    except subprocess.CalledProcessError:
++    except subprocess.CalledProcessError, OSError:
+         return None
+     else:
+         parsed = parse.urlparse(git_remote)
