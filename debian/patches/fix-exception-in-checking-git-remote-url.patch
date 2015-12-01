@@ -1,7 +1,7 @@
 Description: Allow to pass if git isn't installed.
 Author: Thomas Goirand <zigo@debian.org>
 Forwarded: no
-Last-Update: 2015-12-27
+Last-Update: 2015-12-01
 
 --- oslo-sphinx-4.0.0.orig/oslosphinx/__init__.py
 +++ oslo-sphinx-4.0.0/oslosphinx/__init__.py
@@ -10,7 +10,7 @@ Last-Update: 2015-12-27
              ['git', 'config', '--local', '--get', 'remote.origin.url']
          )
 -    except subprocess.CalledProcessError:
-+    except subprocess.CalledProcessError, OSError:
++    except:
          return None
      else:
          parsed = parse.urlparse(git_remote)
