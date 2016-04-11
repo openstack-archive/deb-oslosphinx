@@ -8,6 +8,7 @@ oslo-sphinx (4.3.0-1) UNRELEASED; urgency=medium
 
   [ Ondřej Nový ]
   * Fixed VCS URLs (https).
+  * Added git to depdends (Closes: #820682).
 
  -- David Della Vecchia <ddv@canonical.com>  Thu, 25 Feb 2016 10:23:31 -0500
 

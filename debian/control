@@ -22,7 +22,8 @@ Homepage: https://github.com/openstack/oslo.sphinx
 
 Package: python-oslosphinx
 Architecture: all
-Depends: python-pbr (>= 1.8),
+Depends: git,
+         python-pbr (>= 1.8),
          python-requests (>= 2.8.1),
          python-six (>= 1.9.0),
          ${misc:Depends},
