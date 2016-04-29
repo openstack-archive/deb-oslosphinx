@@ -1,3 +1,755 @@
+commit 8084f2a4685f20f5fce60d292d2771e7c58fb701
+Author: Eric Brown <browne@vmware.com>
+Date:   Wed Feb 3 14:49:04 2016 -0800
+
+    Add version and download badges to README
+    
+    All the other oslo libraries contain such badges, so might as well
+    add to oslosphinx too.
+    
+    Change-Id: I23fa8dc4619940896fb25af39325f076f4dd3e49
+
+commit 7de972255141e462e68ac7a04e25ce2b13bc911a
+Author: Brant Knudson <bknudson@us.ibm.com>
+Date:   Mon Feb 1 14:39:14 2016 -0600
+
+    Correct project source guessing for OpenStack
+    
+    The links to the project source in all the developer docs are
+    incorrect. The link for keystone is like
+    
+     http://git.openstack.org/cgit/p/openstack/keystone
+    
+    when it should be
+    
+     http://git.openstack.org/cgit/openstack/keystone
+    
+    See the link to "Project Source" on the left on
+    http://docs.openstack.org/developer/keystone/ for example.
+    
+    Also, developers sometimes use a ".git" URL when they clone so
+    strip off the .git.
+    
+    Change-Id: I8e7620119a169e3322d602ea633303cf9f941605
+
+commit 6903e98bfbf1e5e5386c256ec5ee6a53ce6e9ec6
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Sat Jan 16 03:31:36 2016 +0000
+
+    Updated from global requirements
+    
+    Change-Id: I086cc0a93b00abc16c2bf9aa03a95d23c8455d44
+
+commit b73bfc5cc9348e6a099151eb3cb3cf919fdc42c1
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Tue Dec 15 18:16:34 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Ifb3265b0f0849e5e9aac97574ae457a4e4415130
+
+commit 422df5892c7b2090889f8a0236a271f9bad7b934
+Merge: ea01f15 bd5fad6
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Mon Dec 14 05:03:36 2015 +0000
+
+    Merge "Deprecated tox -downloadcache option removed"
+
+commit bd5fad6e3ffd53d413ee2f5b833e68bb508da488
+Author: Ondřej Nový <ondrej.novy@firma.seznam.cz>
+Date:   Fri Dec 11 21:06:13 2015 +0100
+
+    Deprecated tox -downloadcache option removed
+    
+    Caching is enabled by default from pip version 6.0
+    
+    More info:
+    https://testrun.org/tox/latest/config.html#confval-downloadcache=path
+    https://pip.pypa.io/en/stable/reference/pip_install/#caching
+    
+    Change-Id: Ic8aa835bbc689246afa8fa8ebd9420c1bb1327a9
+
+commit ea01f15dfeab37fad774d736eafff402575eb115
+Author: sonu.kumar <sonu.kumar@nectechnologies.in>
+Date:   Fri Dec 11 16:23:21 2015 +0530
+
+    Removes MANIFEST.in as it is not needed explicitely by PBR
+    
+    This patch removes `MANIFEST.in` file as pbr generates a sensible
+    manifest from git files and some standard files and it removes
+    the need for an explicit `MANIFEST.in` file.
+    
+    Change-Id: I38b985cc915cbccfa6ba83ae0cffbd72128f146e
+
+commit 2fbfcf568f78b68b54978ea1e43c6a682c3f650b
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Tue Dec 8 15:27:52 2015 -0600
+
+    Use proper decode function name.
+    
+    os.fdecode is not a real thing, os.fsdecode is.
+    
+    Change-Id: I20b3b6d15b7d5775e1f6f97190d9acc62ca3a4ca
+
+commit f8d71ac5ad023a32cbbe04e109eb2793433ee558
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Tue Dec 1 16:34:54 2015 +0000
+
+    trap errors from git not being present
+    
+    subprocess raises OSError if the command it is asked to run isn't found,
+    so trap that as well as the subprocess-specific error we were already
+    catching.
+    
+    Change-Id: Ieb9c7f3ccc307250847104a7f97cfa28603fcf5d
+    Closes-Bug: #1521541
+
+commit 23539cbb14c1258f24f0c2c9928e5235bdbb419c
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Fri Nov 27 22:41:34 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: I97cb7c94fb4d2b23a289fd05ed5e1060a064118a
+
+commit 10d552993479e07a14a0492f1242ee752d4b9940
+Author: Cyril Roelandt <cyril@redhat.com>
+Date:   Wed Nov 18 17:06:23 2015 +0100
+
+    Fix a string vs bytes issue in _guess_cgit_link
+    
+    subprocess.check_output returns bytes, so we end up using '+' on a text
+    string (CGIT_BASE) and bytes (the output of parsed.path) in
+    _guess_cgit_link. Make sure we decode 'git_remote' in Python 3.
+    
+    Change-Id: I9e846e2192ead41ca2328b8aa20994742096c51e
+    Closes-Bug: #1517525
+
+commit da4cfa3f97dfa7454d40fc430e35e4f31cb0c1e4
+Author: ChangBo Guo(gcb) <eric.guo@easystack.cn>
+Date:   Tue Nov 17 15:46:21 2015 +0800
+
+    Remove Python 2.6 classifier
+    
+    We have decided to remove Python 2.6 support, this commit
+    removes Python 2.6 classifier before dropping any Python
+    2.6 support in code.
+    
+    Change-Id: I31d54e5fb1f18e49df42fef2863e70af6b2fdea1
+
+commit 2378e5a9d7c5345ae65566026a23e541ad0b3eff
+Merge: 0b555a0 a3f3bf8
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Tue Nov 17 01:50:18 2015 +0000
+
+    Merge "cleanup tox.ini"
+
+commit 0b555a001f5c2bf9bbc6464e8be5aae04c805f35
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Tue Nov 17 01:06:00 2015 +0000
+
+    fix html context event handler
+    
+    The event handler should return a replacement template *name* or None.
+    Since we don't want to change the template, return None.
+    
+    Change-Id: I3012ad22505230c488aa4babbd4141d903b7ab0d
+    Closes-Bug: 1516834
+
+commit a3f3bf8b1dde3644704ff89ed3567e64223b0ac8
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Sun Nov 15 10:21:11 2015 -0500
+
+    cleanup tox.ini
+    
+    * Remove usedevelop : only needed when skipsdist
+      is set to True
+    * Remove install_command : We can just use the
+      default, we don't need to override
+    * Remove setenv : We can just use the default as
+      we don't need any extra environment variables
+    * sitepackages : default is already false
+    
+    
+    Change-Id: Id13307a8f7c21496e1d5aad20cd9e2146b8f2fbd
+
+commit c383e0026aeb9fb541486f41cf286256e312e5e3
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Fri Oct 16 20:37:34 2015 +0000
+
+    add config option to point to the cgit browser
+    
+    Add a configuration option to let projects set the URL to the cgit
+    browser for their source. Still try to guess at the location based on
+    our git URL.
+    
+    Change-Id: I11455f8a137a029c28a864eb555f69f6c282840b
+
+commit cd2674bb9501b0216dc81ede635e84c379b6309d
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Mon Oct 12 19:50:40 2015 +0000
+
+    fix html-page-context event handler
+    
+    The event handler should return a string if it wants to replace the
+    template, but should otherwise return None and update the context in
+    place.
+    
+    Change-Id: Ic4b19c7d19eda866ba139913cf817c99a65c8c08
+    Closes-Bug: #1505311
+
+commit 53c4ae72e9940c917c8b4fc9a48b8aa4eeda7c81
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Fri Oct 9 05:04:02 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Ib8e15a9f3da8800687d4244540b7a8aa902e5d14
+
+commit 014df1a17447a5186f4545f7e32727e7f02dd547
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Sun Oct 4 19:40:10 2015 -0400
+
+    No need for Oslo Incubator Sync
+    
+    We can remove openstack-common.conf as we don't
+    sync any code from oslo-incubator any more.
+    
+    Change-Id: I600132f6c59bc8adf06c1edbe488fba0d5ee795b
+
+commit 2525bb98d17c239e45342e4191bd946e74484a9e
+Author: Javier Pena <jpena@redhat.com>
+Date:   Mon Sep 28 10:56:05 2015 +0200
+
+    Make urlparse import Python3-compatible
+    
+    urlparse moved to urllib.parse, so the current code fails in
+    Python3. Using six to ensure compatibility.
+    
+    Related-Bug: #1426898
+    
+    Change-Id: I9297c886dcc361238e942cb8162f589072001094
+
+commit b0f3ed9cca78e9239ffd779906ffbae89c3dab6a
+Merge: 36dd92b ff59f30
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Fri Sep 25 21:00:11 2015 +0000
+
+    Merge "Titles in table of contents continue into the page"
+
+commit 36dd92b1e1e6dcb705ca71cb5ae5fb517c259e4d
+Author: Javier Pena <jpena@redhat.com>
+Date:   Fri Sep 25 16:23:18 2015 +0200
+
+    Fix subprocess exception name
+    
+    https://review.openstack.org/227299 added code using
+    subprocess.CheckedProcessException, which does not exist. From
+    the Python documentation, it should be
+    subprocess.CalledProcessError [1]
+    
+    [1] - https://docs.python.org/2/library/subprocess.html#subprocess.CalledProcessError
+    
+    Change-Id: I0e03f048a33b1b919e38d22038650a633b8ac5fd
+
+commit ff59f302c48dea4723381fa036ad7bf5e13c128e
+Author: THOMAS J. COCOZZELLO <tjcocozz@us.ibm.com>
+Date:   Thu Sep 24 07:47:28 2015 -0500
+
+    Titles in table of contents continue into the page
+    
+    In the table of contents the titles are covering words
+    in the page, this won't be a problem but the directories
+    that are in the table of contents are considered 1 word
+    so it does not word wrap automatically
+    
+    Change-Id: I763aa1ba4418be1ea70d1ff48a321971630ec6e4
+    Closes-Bug: 1498654
+
+commit 6ffe7dd4f3b99101d814d8648f22f140d9c1dcdc
+Merge: 6ebaef6 efec9c6
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Fri Sep 25 09:55:19 2015 +0000
+
+    Merge "add link to project source in navigation sidebar"
+
+commit 6ebaef6ba4edb4e336a23d34418519e05977e8c1
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Thu Sep 24 19:41:44 2015 +0000
+
+    clean up documentation titles and intros
+    
+    Change-Id: I9f1bf4e912e53500f603cecb23f86b48d5dbc159
+
+commit fa83ee0dc54e6e11ad53ad01540d3d6e07f89b02
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Thu Sep 24 19:41:29 2015 +0000
+
+    add pbr-generated release history to the doc build
+    
+    Change-Id: I5d24d269a3861c56df0a08fb7e1dcc86e1336e36
+
+commit efec9c68fe2fcc51c147c0b20228a57be60ff2db
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Thu Sep 24 13:21:42 2015 +0000
+
+    add link to project source in navigation sidebar
+    
+    Change-Id: I841f0e63259d6b79c55b223c8e7266c8520a668d
+    Closes-Bug: #1426898
+
+commit e9e52bd118fdf8ae8c14ec3706e0e95cf757fddb
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Thu Sep 17 12:16:20 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Id34a666b95d54872619a505dcf30fde391fddd5b
+
+commit 3f9bccefc9f2bf5f2fbff1eb6cf6d35db39fa3fd
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Wed Aug 26 14:08:08 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Idaa1f7f8c45759bbb2af4abda7a635c5f92aec6f
+
+commit 66f688aedcf3af7a96183f6561d05e539db90eb6
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Mon Aug 10 01:09:50 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Id53b19b67a2dd99d568141d6d36b0cdb720dcf27
+
+commit 4436e1161bf14d232edab035199cf59b32436efa
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Wed Jul 15 00:29:02 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: I45aab8ced05719e3189bb129afea54f8070f0b85
+
+commit 01d3a5a662044535db26d4c8c828632401e6d2fa
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Mon Jun 22 08:27:25 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: I7889ee5c3e1d9c686451149beaca09ba136026ec
+
+commit 774a129dcab04116fa7bcceaacb2fecaba391300
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Tue Jun 16 17:26:12 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Ie2cca4e8cb2eade195cee152b54c6f567a11dc6f
+
+commit af39c45cca2a77a78c062f9865f23a987e3613f7
+Merge: f14ad41 46832a8
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Wed May 27 21:05:05 2015 +0000
+
+    Merge "Drop incubating theme option"
+
+commit 46832a8942c5f56f2cc8d1689304c57ab5c38c7e
+Author: Joe Gordon <joe.gordon0@gmail.com>
+Date:   Wed May 27 12:18:31 2015 -0700
+
+    Drop incubating theme option
+    
+    OpenStack has dropped the incubation concept, so drop this label as a
+    docs option.
+    
+    Change-Id: Ib95bb403d51ed3c7b682dd695713f43432cf8a4e
+
+commit f14ad415adc246572c9eb85bdda9be2c4bcf9280
+Author: Jeremy Stanley <fungi@yuggoth.org>
+Date:   Thu May 14 21:38:20 2015 +0000
+
+    Replace ci.o.o links with docs.o.o/infra
+    
+    The http://ci.openstack.org/ documentation site has been deprecated,
+    replaced by redirects to corresponding paths within
+    http://docs.openstack.org/infra/ where other Project Infrastructure
+    documentation already resides.
+    
+    Change-Id: Ia914d1802b57f7101dd86b2098857dd714763dd1
+
+commit 6a1260bcc8abd81f7af2dd66f0f70dbc3b77b759
+Merge: c9d9c55 33845ab
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Tue May 12 20:12:34 2015 +0000
+
+    Merge "Remove the unneeded horizontal scrollbar"
+
+commit c9d9c557aadb47308db32151547fff321cc36118
+Merge: 34f8618 495aec3
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Tue May 12 18:42:24 2015 +0000
+
+    Merge "Advertise support for Python3.4 / Remove support for Python 3.3"
+
+commit 34f8618ed1a3722939c855edcca17ce8767a133d
+Merge: d79b8cc 90a1e5d
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Mon May 11 20:18:37 2015 +0000
+
+    Merge "Remove run_cross_tests.sh"
+
+commit 495aec3b4381889c06a6002dd687a59b843d427d
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Fri May 8 16:08:21 2015 -0400
+
+    Advertise support for Python3.4 / Remove support for Python 3.3
+    
+    Change-Id: I2e5d3e5409cf08c69703f8cdf0ace0c2ac65f900
+
+commit d79b8cc3ffe01a8a6e1911492413c9f01c0ecd15
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Thu May 7 23:36:54 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: I53fe1ede93a10518c4d97db8027034e380a06566
+
+commit 90a1e5d5f517313f2c2a77918d97bae94a722417
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Fri May 1 19:39:53 2015 +0000
+
+    Remove run_cross_tests.sh
+    
+    This script is part of the oslotest package now.
+    
+    Change-Id: I14681b35dbcc9290adc59b77f73e1580a1f46acf
+
+commit 6e76e425d7e4591243b3e57ccce0829605222d3a
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Mon May 4 20:08:42 2015 +0000
+
+    Updated from global requirements
+    
+    Change-Id: I1cca99b86c395d0025fcb73575e036e30b2cdb36
+
+commit 33845ab55c238fffe746969600da5233e8c5e94b
+Author: Dougal Matthews <dougal@redhat.com>
+Date:   Thu Apr 9 15:15:25 2015 +0100
+
+    Remove the unneeded horizontal scrollbar
+    
+    Even on really large screens, the horizontal scrollbar is shown. This is
+    because the `div.related` class has a width of 100% in basic.css and in
+    tweaks.css a border is also defined. This causes the div to be two pixes
+    wider than the screen.
+    
+    Change-Id: I2881d8eca99988ff8372b22aecc1a1a90c66a314
+
+commit 7ddfe1c965474f28a5a4a25062e0c35243ad6452
+Author: Anne Gentle <anne@openstack.org>
+Date:   Wed Apr 8 16:27:26 2015 -0500
+
+    Adds javascript footer for Google Analytics tracking
+    
+    - Ensures tracking is across all openstack.org web properties
+    - Tracks only docs.openstack.org/developer/{{ project }} where
+    project name is taken from conf.py
+    
+    Change-Id: Idfb2696f42ff17cbc6c3b72afcd2630b9ae01f0e
+    Closes-bug: 1441315
+
+commit 199235c021e8b193eeea3eeef7e3aaa36cf40721
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Fri Apr 3 14:12:14 2015 +0000
+
+    Update to latest hacking
+    
+    Change-Id: Ib077c249bcb7ca5f8f795bf94c75f7f1d15a5746
+
+commit e1b0dca451f2a492f5761950077eb6e721b64f60
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Tue Feb 24 18:52:53 2015 -0500
+
+    Speed up blueprint checking with naming convention
+    
+    If the blueprint file is named beginning with the name of a project,
+    look there for the blueprint first.
+    
+    Change-Id: I49cf48ed001945670ab900fcc76cd4c2087ddbb7
+
+commit 7312f510e0f0025b43fbde2ea899a258b994f741
+Merge: 7c282dc ccf8e1a
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Fri Jan 30 17:21:12 2015 +0000
+
+    Merge "Update run_cross_tests.sh to latest"
+
+commit 7c282dc14a0c7a718a2f477e958822e4cf186d2a
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Mon Jan 26 17:10:43 2015 -0500
+
+    Allow alternate OpenStack themes
+    
+    By default oslosphinx forces projects that use it to use the theme
+    contained in the package. The documentation team wants to provide a
+    separate theme for some parts of the docs.openstack.org site. They are
+    going to distribute it in their own package, but do still want to be
+    able to use other features of oslosphinx. This change allows any name
+    that starts "openstack" to be used, while retaining the default behavior
+    of inserting the "openstack" theme if a project is using a different
+    default or has not set a theme.
+    
+    Change-Id: I7a2c5a5c3805685b8fa0baaa47393d5fec312f30
+
+commit ccf8e1a8a957100164e7bbc72f5861b028c009a9
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Tue Jan 20 13:18:54 2015 -0500
+
+    Update run_cross_tests.sh to latest
+    
+    Change-Id: I0f660fde6bae0cc5a4aa1b7deb9f94d3ffee0bc5
+
+commit f640b5e3f8b374892645549693bb557efdc448db
+Merge: 33d4850 7275016
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Fri Jan 16 18:36:23 2015 +0000
+
+    Merge "Add run_cross_tests.sh from incubator"
+
+commit 33d48509bcf0e6afe7637ce4ec2c072c8412fc3a
+Merge: c01c226 4ce81f8
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Sun Jan 11 20:31:19 2015 +0000
+
+    Merge "Add an extension for validating blueprint names"
+
+commit c01c2265383fab6414d715cbb08ae8b294b1921c
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Tue Dec 2 11:32:10 2014 -0500
+
+    Add links to the README
+    
+    Add a few links to resources for the project so humans can find them but
+    also so the release notes script will find them.
+    
+    Change-Id: If5fb9387e9ffb5c9288632beaa1b6d4e90d48033
+
+commit 72750165445f4c39e2b830c82daadf1d3fa2786a
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Tue Dec 9 10:06:48 2014 -0500
+
+    Add run_cross_tests.sh from incubator
+    
+    Import run_cross_tests.sh from the incubator to make it easier to test
+    the theme and other extensions against existing repositories.
+    
+    Change-Id: Ic36c8950d7cdafcfe74f88ed7dde00f98534b2af
+
+commit 4ce81f85fbee729a443d5c6e2f20fb328f18a9db
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Tue Dec 9 09:55:54 2014 -0500
+
+    Add an extension for validating blueprint names
+    
+    This new extension requires spec filenames to match blueprint names in
+    the relevant project. This is based on work originally done in
+    oslo-specs under https://review.openstack.org/#/c/138392/
+    
+    Change-Id: Ifd58f4f71f661229f09ecf01047bc7a7b1dc0b08
+
+commit 879cbc5e9a0683941cfe32c7aaa5940bcbeecfd3
+Author: Jeremy Stanley <fungi@yuggoth.org>
+Date:   Fri Dec 5 03:30:39 2014 +0000
+
+    Workflow documentation is now in infra-manual
+    
+    Replace URLs for workflow documentation to appropriate parts of the
+    OpenStack Project Infrastructure Manual.
+    
+    Change-Id: I5215be3250a2b88a46258d55d5aab611a4091113
+
+commit 60c87813da9f2ea056a64f3e8f7eb7b14057b53e
+Merge: 21e5b42 acd9067
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Thu Dec 4 18:40:22 2014 +0000
+
+    Merge "Tighten up documentation"
+
+commit 21e5b4249bc1a4ef01b693bb9dfa25059393e2dd
+Merge: c7e307e 64fe08f
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Tue Nov 25 21:08:06 2014 +0000
+
+    Merge "Add pbr to installation requirements"
+
+commit c7e307e35917fabd4990894c765d8f08b7da5296
+Author: Sean Dague <sean@dague.net>
+Date:   Mon Nov 17 08:36:30 2014 -0500
+
+    provide visual separation in sidebar
+    
+    Enhance the sidebar display to provide visual distinction between top
+    level items and lower level items. Top level items are now given a
+    space above them so they are visually clumped with their children, and
+    separated from each other. They are also emboldened for greater visual
+    distinction.
+    
+    Ideally sphinx would actually tag li items with their depth as a class
+    tag, but as it currently doesn't do that we can work around it with
+    setting at ul li, and unsetting at ul li ul li.
+    
+    Change-Id: I88d4317ec69fe7fd6f5c2198f89de624f0d093da
+
+commit c8b7c4b344ddd3af7d3caa695a11de883dea2965
+Merge: 6ce23c5 cf85e06
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Thu Nov 13 22:39:44 2014 +0000
+
+    Merge "Report documentation build warnings as errors"
+
+commit 6ce23c5983ca552083a6963b8c698bb82ad0d504
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Sat Oct 11 15:56:21 2014 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Ie3c6bc00b6e3a13cf5f2ac0e68aa25fb8204375d
+
+commit 64fe08f93121dae6ba1d62aadf734fd8dc53f8cf
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Fri Oct 24 09:32:21 2014 -0400
+
+    Add pbr to installation requirements
+    
+    Add pbr to the list of installation requirements so that it is installed
+    via pip before this library is installed, instead of with easy_install.
+    This avoids issues like Bug #1384919, and ensures that projects that use
+    this library as a dependency are properly installed.
+    
+    Change-Id: I6c155370dbd01fe4748d5137bdf288e8d3e1a67e
+
+commit acd90677ef1ac0583cf4fe457236ff6e7d575845
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Tue Oct 21 14:56:34 2014 -0400
+
+    Tighten up documentation
+    
+    Remove some mostly empty pages and add a few section headings.
+    
+    Change-Id: I5f0b99ce7573c60b741dd726e55f28cf3bf9f7fc
+
+commit cf85e067d6b7302555b1b6009e2ac4aa82c0fae5
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Fri Sep 19 11:32:56 2014 -0400
+
+    Report documentation build warnings as errors
+    
+    Change-Id: Ib96d7e0353762e7296292739cd784f8e10d24ce2
+
+commit 446a8dc6ca827fe5e9c17f24ea7326338d10d9d6
+Author: Davanum Srinivas <dims@linux.vnet.ibm.com>
+Date:   Wed Sep 3 15:51:48 2014 -0400
+
+    Add initial cut for documentation
+    
+    Closes-Bug: #1364141
+    
+    Change-Id: I137d244a50088918e2356da883d09f5d95da8bca
+
+commit 846487072c5e66b7aea615bd8efdb849409eb1c9
+Author: Julien Danjou <julien@danjou.info>
+Date:   Thu Sep 11 10:37:00 2014 +0200
+
+    Remove empty file
+    
+    It's useless to include it since it's empty.
+    
+    Change-Id: I18e147ed2a62671ece9228eb3c6c411bb2aea8f7
+
+commit f6fee8b01f20791ce18a090c2b8e23d323ee23be
+Author: Doug Hellmann <doug@doughellmann.com>
+Date:   Wed Sep 3 14:34:48 2014 -0400
+
+    warn against sorting requirements
+    
+    Change-Id: I64ae9191863564e278a35d42ec9cd743a233028e
+    Addresses-Bug: #1365061
+
+commit 98c8c4b8ad297d1fb2269da14ad6ea7009349aeb
+Author: Graham Hayes <graham.hayes@hp.com>
+Date:   Mon Jul 7 17:39:24 2014 +0100
+
+    Fixed link text colour for incubation variant
+    
+    When using a link inside the h3.highlighted sidebar element the
+    text reverts to the default grey colour
+    
+    Change-Id: I4e35abd6da42a5d9a7bb8c3b56fd4e8610e4e17c
+
+commit c144be899391901c34d8ad5a87e457325d8774fb
+Author: Graham Hayes <graham.hayes@hp.com>
+Date:   Tue Jul 1 17:10:33 2014 +0100
+
+    Added a incubating project config option
+    
+    This allows projects that are currently incubated to use oslosphinx
+    
+    To use a project needs to set
+    
+    'html_theme_options = {'incubating': True}'
+    
+    in their sphinx conf.py
+    
+    This is option reflected by changing the side bar to have a bar
+    at the top that shows 'Incubated Project'
+    
+    Change-Id: Ib5a06ac1749fec475d326afe19f16fffb8c7d4a7
+
+commit b5a3060528d7c014f8d886f11c9de53a41675549
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Mon Jun 16 09:52:24 2014 +0000
+
+    Updated from global requirements
+    
+    Change-Id: I1588c1e6bbb24999323b8d95b701f01441047c51
+
+commit ea4511ebfa66f053947418e7b91f127a4a92624c
+Author: Davanum Srinivas <dims@linux.vnet.ibm.com>
+Date:   Wed Jun 11 21:57:10 2014 -0400
+
+    Bump hacking to 0.9.x series
+    
+    Change-Id: Iff7562692fe76d24abb16d7b9f283ede2db4357e
+
+commit 616f90e6855a00d216ce100a4266ddcfc568d8d7
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Wed Apr 30 02:46:02 2014 +0000
+
+    Updated from global requirements
+    
+    Change-Id: I17f8130c00fd933e5baafb127b41fc8e3fdbafff
+
+commit 9813d18b43e563a004df1190ac70092ebdc8a531
+Merge: 1933275 195ce9e
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Fri Apr 25 11:46:59 2014 +0000
+
+    Merge "Support building wheels (PEP-427)"
+
+commit 1933275d31b5d381f687472633a2c9911a69dcad
+Merge: b612e98 4b0525f
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Mon Apr 14 21:19:14 2014 +0000
+
+    Merge "Add Python 3 trove classifiers"
+
+commit b612e989703356ec30ff195187e8de70d29551a6
+Merge: d329312 40d720e
+Author: Jenkins <jenkins@review.openstack.org>
+Date:   Thu Apr 10 22:03:29 2014 +0000
+
+    Merge "Prevent left sidebar text overflow"
+
 commit d32931265aa9cbc3401740119199c61715d2a15c
 Author: Vishvananda Ishaya <vishvananda@gmail.com>
 Date:   Tue Mar 18 11:22:06 2014 -0700
@@ -9,6 +761,26 @@ Date:   Tue Mar 18 11:22:06 2014 -0700
     
     Change-Id: Ib43879697cb855341904500dae3075f7ea5c17c0
     Resolves-bug: 1294272
+
+commit 40d720e732a7e4eeb0a33ebca2bb7ac5e6c6f78b
+Author: Davanum Srinivas <dims@linux.vnet.ibm.com>
+Date:   Fri Mar 7 15:58:32 2014 -0500
+
+    Prevent left sidebar text overflow
+    
+    Add break-word to stop the overflow from the sidebar to the main
+    content.
+    
+    Change-Id: I5b2c60e439462f46eb0b24e5133593d293085c87
+    Closes-Bug: #1289548
+
+commit 4b0525fd3988210108b48f5750108b525580eaaf
+Author: Cyril Roelandt <cyril.roelandt@enovance.com>
+Date:   Mon Mar 10 13:47:46 2014 +0100
+
+    Add Python 3 trove classifiers
+    
+    Change-Id: Ia3633ef89ebc9566e9b91d18b1596b95810c657d
 
 commit ba83cf44b514f65b85b199697f8668fe47ff1083
 Author: ChangBo Guo(gcb) <eric.guo@easystack.cn>
@@ -46,6 +818,18 @@ Date:   Fri Feb 7 20:42:08 2014 +0000
     Update .gitreview after repo rename
     
     Change-Id: I6b6e20a7884b47ade466fc38641a5ac1a5f3e146
+
+commit 195ce9e9e24480e7b264af95ea9a8012056126a8
+Author: Sascha Peilicke <speilicke@suse.com>
+Date:   Tue Nov 19 09:53:49 2013 +0100
+
+    Support building wheels (PEP-427)
+    
+    Universal is used to identify pure-Python module(by bdist_wheel). For
+    these, it is sufficient to build a wheel with _any_ Python ABI version
+    and publish that to PyPI (by whatever means).
+    
+    Change-Id: I34b7f390e2ac60d1a35e1bd352d483e0de7a51e1
 
 commit 229e16bde97e7b3c7d9c0fd7a4a18c553ce94522
 Author: Doug Hellmann <doug.hellmann@dreamhost.com>
