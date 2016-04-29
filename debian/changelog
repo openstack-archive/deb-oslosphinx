@@ -19,6 +19,7 @@ oslo-sphinx (4.3.0-1) UNRELEASED; urgency=medium
 oslo-sphinx (4.0.0-2) unstable; urgency=medium
 
   * Uploading to unstable.
+  * Adding myself to uploaders list.
 
  -- Ivan Udovichenko <iudovichenko@mirantis.com>  Mon, 04 Apr 2016 11:05:25 +0300
 
@@ -32,7 +33,6 @@ oslo-sphinx (4.0.0-1) experimental; urgency=medium
 
   [ Thomas Goirand ]
   * Add patch to remove google-analytics.com javascript.
-  * Add patch to make oslpshinx to work without git installed.
 
  -- Thomas Goirand <zigo@debian.org>  Thu, 26 Nov 2015 15:02:24 +0100
 
