@@ -15,7 +15,7 @@ Build-Depends: debhelper (>= 9),
 Build-Depends-Indep: python-hacking (>= 0.10.0),
                      python-requests (>= 2.8.1),
                      python-six (>= 1.9.0),
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Vcs-Browser: https://anonscm.debian.org/cgit/openstack/oslo-sphinx.git/
 Vcs-Git: https://anonscm.debian.org/git/openstack/oslo-sphinx.git
 Homepage: https://github.com/openstack/oslo.sphinx
