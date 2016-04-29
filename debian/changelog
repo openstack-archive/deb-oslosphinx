@@ -1,5 +1,7 @@
 oslo-sphinx (4.3.0-1) unstable; urgency=medium
 
+  * Team upload.
+
   [ David Della Vecchia ]
   * New upstream release (Closes: #820682).
   * d/control: Align depends with upstream.
@@ -7,7 +9,6 @@ oslo-sphinx (4.3.0-1) unstable; urgency=medium
     fixed upstream.
 
   [ Ondřej Nový ]
-  * Team upload.
   * Fixed VCS URLs (https).
   * Added simple Debian test.
   * d/copyright
