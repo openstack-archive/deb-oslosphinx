@@ -2,14 +2,6 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: oslo.sphinx
 Source: git://github.com/openstack/oslo.sphinx.git
 
-Files: debian/*
-Copyright: (c) 2013, Thomas Goirand <zigo@debian.org>
-License: Apache-2.0
-
-Files: oslosphinx/theme/openstack/static/nature.css
-Copyright: (c) 2007-2011 the Sphinx team
-License: BSD-2-clause
-
 Files: *
 Copyright: (c) 2013, Monty Taylor <mordred@inaugust.com>
            (c) 2013, Doug Hellmann <doug.hellmann@dreamhost.com>
@@ -17,6 +9,14 @@ Copyright: (c) 2013, Monty Taylor <mordred@inaugust.com>
            (c) 2013, New Dream Network, LLC (DreamHost)
            (c) 2013, Hewlett-Packard Development Company, L.P.
 License: Apache-2.0
+
+Files: debian/*
+Copyright: (c) 2013, Thomas Goirand <zigo@debian.org>
+License: Apache-2.0
+
+Files: oslosphinx/theme/openstack/static/nature.css
+Copyright: (c) 2007-2011 the Sphinx team
+License: BSD-2-clause
 
 License: Apache-2.0
  Licensed under the Apache License, Version 2.0 (the "License");
