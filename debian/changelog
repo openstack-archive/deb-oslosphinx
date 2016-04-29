@@ -9,7 +9,9 @@ oslo-sphinx (4.3.0-1) UNRELEASED; urgency=medium
   [ Ondřej Nový ]
   * Fixed VCS URLs (https).
   * Added simple Debian test.
-  * Rearranged order of d/copyright.
+  * d/copyright
+    - Rearranged order of d/copyright.
+    - Added myself of Debian part.
   * Standards-Version is 3.9.8 now (no change).
   * Changed upstream git URL to https schema.
 
