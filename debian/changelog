@@ -1,4 +1,4 @@
-oslo-sphinx (4.3.0-1) UNRELEASED; urgency=medium
+oslo-sphinx (4.3.0-1) unstable; urgency=medium
 
   [ David Della Vecchia ]
   * New upstream release (Closes: #820682).
@@ -7,6 +7,7 @@ oslo-sphinx (4.3.0-1) UNRELEASED; urgency=medium
     fixed upstream.
 
   [ Ondřej Nový ]
+  * Team upload.
   * Fixed VCS URLs (https).
   * Added simple Debian test.
   * d/copyright
@@ -15,7 +16,7 @@ oslo-sphinx (4.3.0-1) UNRELEASED; urgency=medium
   * Standards-Version is 3.9.8 now (no change).
   * Changed upstream git URL to https schema.
 
- -- David Della Vecchia <ddv@canonical.com>  Thu, 25 Feb 2016 10:23:31 -0500
+ -- Ondřej Nový <novy@ondrej.org>  Fri, 29 Apr 2016 12:21:43 +0200
 
 oslo-sphinx (4.0.0-2) unstable; urgency=medium
 
