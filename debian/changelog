@@ -1,14 +1,13 @@
 oslo-sphinx (4.3.0-1) UNRELEASED; urgency=medium
 
   [ David Della Vecchia ]
-  * New upstream release.
+  * New upstream release (Closes: #820682).
   * d/control: Align depends with upstream.
   * d/p/fix-exception-in-checking-git-remote-url.patch: Removed,
     fixed upstream.
 
   [ Ondřej Nový ]
   * Fixed VCS URLs (https).
-  * Added git to depdends (Closes: #820682).
   * Added simple Debian test.
   * Rearranged order of d/copyright.
   * Standards-Version is 3.9.8 now (no change).
