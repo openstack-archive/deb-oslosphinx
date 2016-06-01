@@ -1,3 +1,9 @@
+oslo-sphinx (4.4.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 01 Jun 2016 11:05:24 -0400
+
 oslo-sphinx (4.3.0-1) unstable; urgency=medium
 
   * Team upload.
