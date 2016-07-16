@@ -11,6 +11,7 @@ oslo-sphinx (4.4.0-1) UNRELEASED; urgency=medium
   * Bumped openstack-pkg-tools required version to 51
   * Enabled autopkgtest-pkg-python testsuite
   * Use extend-diff-ignore to ignore egg-info
+  * Rebased d/p/remove-google-analytics.patch
 
  -- Corey Bryant <corey.bryant@canonical.com>  Wed, 01 Jun 2016 11:05:24 -0400
 
