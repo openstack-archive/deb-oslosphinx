@@ -1,2 +1,0 @@
-Depends: python-oslosphinx
-Test-Command: cd "$ADTTMP" ; python -c "import oslosphinx ; print oslosphinx"
