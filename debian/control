@@ -8,27 +8,64 @@ Uploaders: Thomas Goirand <zigo@debian.org>,
            David Della Vecchia <ddv@canonical.com>,
 Build-Depends: debhelper (>= 9),
                dh-python,
-               openstack-pkg-tools (>= 23~),
+               openstack-pkg-tools (>= 51~),
                python-all,
                python-pbr (>= 1.8),
                python-setuptools,
                python-sphinx,
+               python3-all,
+               python3-pbr (>= 1.8),
+               python3-setuptools,
+               python3-sphinx,
 Build-Depends-Indep: python-hacking (>= 0.10.0),
                      python-requests (>= 2.10.0),
                      python-six (>= 1.9.0),
+                     python3-hacking (>= 0.10.0),
+                     python3-requests (>= 2.10.0),
+                     python3-six (>= 1.9.0),
 Standards-Version: 3.9.8
 Vcs-Browser: https://anonscm.debian.org/cgit/openstack/oslo-sphinx.git/
 Vcs-Git: https://anonscm.debian.org/git/openstack/oslo-sphinx.git
 Homepage: https://github.com/openstack/oslo.sphinx
+Testsuite: autopkgtest-pkg-python
 
 Package: python-oslosphinx
 Architecture: all
-Depends: python-pbr (>= 1.8),
+Depends: python-oslosphinx-common,
+         python-pbr (>= 1.8),
          python-requests (>= 2.10.0),
          python-six (>= 1.9.0),
          ${misc:Depends},
          ${python:Depends},
-Description: theme and extension support for openstack
+Description: theme and extension support for openstack - Python 2.7
  Theme and extension support for Sphinx documentation from the OpenStack
  project. To use the theme, symply add 'oslosphinx' to the extensions list in
  the conf.py file in your Sphinx project.
+ .
+ This package contains the Python 2.7 module.
+
+Package: python3-oslosphinx
+Architecture: all
+Depends: python-oslosphinx-common,
+         python3-pbr (>= 1.8),
+         python3-requests (>= 2.10.0),
+         python3-six (>= 1.9.0),
+         ${misc:Depends},
+         ${python3:Depends},
+Description: theme and extension support for openstack - Python 3.x
+ Theme and extension support for Sphinx documentation from the OpenStack
+ project. To use the theme, symply add 'oslosphinx' to the extensions list in
+ the conf.py file in your Sphinx project.
+ .
+ This package contains the Python 3.x module.
+
+Package: python-oslosphinx-common
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+Description: theme and extension support for openstack - common
+ Theme and extension support for Sphinx documentation from the OpenStack
+ project. To use the theme, symply add 'oslosphinx' to the extensions list in
+ the conf.py file in your Sphinx project.
+ .
+ This package contains the common files.

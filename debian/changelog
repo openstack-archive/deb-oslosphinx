@@ -1,8 +1,15 @@
 oslo-sphinx (4.4.0-1) UNRELEASED; urgency=medium
 
+  [ Corey Bryant ]
   * New upstream release.
   * d/gbp.conf: Update branch for Newton.
   * d/control: Align (Build-)Depends with upstream.
+
+  [ Ondřej Nový ]
+  * Added Python3 version
+  * Moved theme to python-oslosphinx-common package
+  * Bumped openstack-pkg-tools required version to 51
+  * Enabled autopkgtest-pkg-python testsuite
 
  -- Corey Bryant <corey.bryant@canonical.com>  Wed, 01 Jun 2016 11:05:24 -0400
 
