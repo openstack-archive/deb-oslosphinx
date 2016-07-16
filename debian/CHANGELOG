@@ -1,3 +1,24 @@
+commit c327f858e6934d2558267e91085d588077921c89
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Tue May 17 14:09:18 2016 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Ie5922a24122950c6ab82637d818bdac284a469f2
+
+commit 75cfb9f93b3560ff412cae4de3029157c14b258f
+Author: John Dickinson <me@not.mn>
+Date:   Fri May 6 16:49:48 2016 -0700
+
+    add recent versions links to sidebar
+    
+    The last five tags (that start with a number) are used as version
+    numbers and linked to. This updates the sphinx extension so that
+    every user of the theme gets this info automatically with no need
+    to update the conf.py on a per-project basis.
+    
+    Change-Id: I9bf17872bd23bed3cab9b5e2349d615c7001cb66
+
 commit 8084f2a4685f20f5fce60d292d2771e7c58fb701
 Author: Eric Brown <browne@vmware.com>
 Date:   Wed Feb 3 14:49:04 2016 -0800
