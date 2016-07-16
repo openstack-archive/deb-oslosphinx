@@ -1,4 +1,6 @@
-oslo-sphinx (4.4.0-1) UNRELEASED; urgency=medium
+oslo-sphinx (4.4.0-1) experimental; urgency=medium
+
+  * Team upload
 
   [ Corey Bryant ]
   * New upstream release.
@@ -13,7 +15,7 @@ oslo-sphinx (4.4.0-1) UNRELEASED; urgency=medium
   * Use extend-diff-ignore to ignore egg-info
   * Rebased d/p/remove-google-analytics.patch
 
- -- Corey Bryant <corey.bryant@canonical.com>  Wed, 01 Jun 2016 11:05:24 -0400
+ -- Ondřej Nový <onovy@debian.org>  Sat, 16 Jul 2016 15:50:43 +0200
 
 oslo-sphinx (4.3.0-1) unstable; urgency=medium
 
