@@ -10,6 +10,7 @@ oslo-sphinx (4.4.0-1) UNRELEASED; urgency=medium
   * Moved theme to python-oslosphinx-common package
   * Bumped openstack-pkg-tools required version to 51
   * Enabled autopkgtest-pkg-python testsuite
+  * Use extend-diff-ignore to ignore egg-info
 
  -- Corey Bryant <corey.bryant@canonical.com>  Wed, 01 Jun 2016 11:05:24 -0400
 
