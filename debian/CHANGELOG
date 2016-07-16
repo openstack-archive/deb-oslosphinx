@@ -1,3 +1,25 @@
+commit e2ded8e3074d5b50802e615803d73ca4587d94f3
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
+Date:   Tue Jun 21 18:04:46 2016 +0000
+
+    Updated from global requirements
+    
+    Change-Id: Icaf8086589d629798108ead9e1c57e3d1a19cae4
+
+commit d901a7bd61db6a60e909978ffa9cd0e340519cfc
+Author: Joshua Harlow <jxharlow@godaddy.com>
+Date:   Wed Jun 1 15:15:40 2016 -0700
+
+    Subprocess returns bytes in py3
+    
+    When later used the current code will break in
+    python3 due to:
+    
+    TypeError: 'str' does not support the buffer
+               interface
+    
+    Change-Id: I11572dd510ce8255ed66de56d5d9000755f7fee2
+
 commit c327f858e6934d2558267e91085d588077921c89
 Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org>
 Date:   Tue May 17 14:09:18 2016 +0000
