@@ -1,0 +1,33 @@
+From 73d851b2e3874d16f01f26439006dea9163eb770 Mon Sep 17 00:00:00 2001
+From: Ondřej Nový <ondrej.novy@firma.seznam.cz>
+Date: Sun, 17 Jul 2016 13:56:32 +0200
+Subject: [PATCH] Fixed AttributeError: 'str' object has no attribute 'decode'
+Forwarded: https://review.openstack.org/#/c/343281/
+
+When git cmd fails, raw_version_list is set to empty 'str' and then
+we are trying to decode it. This patch moves decoding inside try/catch
+block, so we are decoding return value of subprocess call, which is bytes
+in Python 3.
+
+Change-Id: Ibd2f556355a6413beb21473ebfca3b836cbc1d73
+---
+
+--- a/oslosphinx/__init__.py
++++ b/oslosphinx/__init__.py
+@@ -48,14 +48,14 @@
+     try:
+         raw_version_list = subprocess.Popen(
+             git_cmd, stdout=subprocess.PIPE).communicate()[0]
++        if six.PY3:
++            raw_version_list = raw_version_list.decode("utf8")
+     except OSError:
+         app.warn('Cannot get tags from git repository. '
+                  'Not setting "other_versions".')
+         raw_version_list = ''
+ 
+     # grab last five that start with a number and reverse the order
+-    if six.PY3:
+-        raw_version_list = raw_version_list.decode("utf8")
+     other_versions = [t for t in raw_version_list.split('\n')
+                       if t and t[0] in string.digits][:-6:-1]
+     context['other_versions'] = other_versions

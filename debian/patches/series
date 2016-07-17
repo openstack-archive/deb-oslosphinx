@@ -1,2 +1,3 @@
 remove-google-analytics.patch
 move_theme.patch
+fixed_attribute_error.patch
