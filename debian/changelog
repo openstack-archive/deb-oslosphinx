@@ -1,3 +1,9 @@
+oslo-sphinx (4.3.0-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Ondřej Nový <onovy@debian.org>  Sun, 17 Jul 2016 23:25:57 +0200
+
 oslo-sphinx (4.3.0-1) unstable; urgency=medium
 
   * Team upload.
