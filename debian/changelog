@@ -1,10 +1,11 @@
-oslo-sphinx (4.6.0-1) UNRELEASED; urgency=medium
+oslo-sphinx (4.6.0-1) experimental; urgency=medium
 
+  * Team upload.
   * New upstream release
   * Rebased d/p/move_theme.patch
   * Added d/p/fixed_attribute_error.patch
 
- -- Ondřej Nový <onovy@debian.org>  Sat, 16 Jul 2016 20:55:19 +0200
+ -- Ondřej Nový <onovy@debian.org>  Mon, 18 Jul 2016 21:24:29 +0200
 
 oslo-sphinx (4.4.0-1) experimental; urgency=medium
 
