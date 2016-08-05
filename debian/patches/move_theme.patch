@@ -5,7 +5,7 @@ Last-Update: 2016-07-16
 
 --- a/oslosphinx/__init__.py
 +++ b/oslosphinx/__init__.py
-@@ -63,7 +63,7 @@
+@@ -73,7 +73,7 @@
  
  
  def builder_inited(app):

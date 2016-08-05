@@ -12,9 +12,11 @@ in Python 3.
 Change-Id: Ibd2f556355a6413beb21473ebfca3b836cbc1d73
 ---
 
+diff --git a/oslosphinx/__init__.py b/oslosphinx/__init__.py
+index 94738e8..773ceb6 100644
 --- a/oslosphinx/__init__.py
 +++ b/oslosphinx/__init__.py
-@@ -48,14 +48,13 @@
+@@ -55,14 +55,13 @@
      try:
          raw_version_list = subprocess.Popen(
              git_cmd, stdout=subprocess.PIPE).communicate()[0]
@@ -28,6 +30,6 @@ Change-Id: Ibd2f556355a6413beb21473ebfca3b836cbc1d73
      # grab last five that start with a number and reverse the order
 -    if six.PY3:
 -        raw_version_list = raw_version_list.decode("utf8")
-     other_versions = [t for t in raw_version_list.split('\n')
-                       if t and t[0] in string.digits][:-6:-1]
-     context['other_versions'] = other_versions
+     _tags = [t.strip("'") for t in raw_version_list.split('\n')]
+     other_versions = [
+         t for t in _tags if t and t[0] in string.digits
