@@ -1,9 +1,10 @@
-oslo-sphinx (4.7.0-1) UNRELEASED; urgency=medium
+oslo-sphinx (4.7.0-1) experimental; urgency=medium
 
+  * Team upload.
   * New upstream release
   * Rebased d/p/fixed_attribute_error.patch
 
- -- Ondřej Nový <onovy@debian.org>  Fri, 05 Aug 2016 22:31:20 +0200
+ -- Ondřej Nový <onovy@debian.org>  Fri, 05 Aug 2016 22:40:53 +0200
 
 oslo-sphinx (4.6.0-1) experimental; urgency=medium
 
