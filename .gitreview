@@ -1,4 +1,5 @@
 [gerrit]
 host=review.openstack.org
 port=29418
-project=openstack/oslosphinx.git
+project=openstack/deb-oslosphinx.git
+defaultbranch=debian/newton
