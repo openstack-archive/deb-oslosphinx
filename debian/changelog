@@ -1,10 +1,11 @@
-oslo-sphinx (4.7.0-2) experimental; urgency=medium
+oslo-sphinx (4.7.0-2) unstable; urgency=medium
 
   [ Ondřej Nový ]
   * d/s/options: extend-diff-ignore of .gitreview
   * d/control: Using OpenStack's Gerrit as VCS URLs.
 
   [ Thomas Goirand ]
+  * Uploading to unstable.
   * Package missing files (ie: all from oslosphinx/theme was missing).
 
  -- Thomas Goirand <zigo@debian.org>  Sat, 01 Oct 2016 21:16:35 +0200
